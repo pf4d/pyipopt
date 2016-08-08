@@ -50,7 +50,7 @@ pyipopt_extension = Extension(
         libraries=[
             'ipopt', 'blas',
             #'coinhsl',
-            'mumps',
+            'coinmumps',
             'metis',
             'lapack','dl','m',
             ],
