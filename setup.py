@@ -51,7 +51,7 @@ pyipopt_extension = Extension(
             'ipopt', 'blas',
             #'coinhsl',
             'coinmumps',
-            'metis',
+            'coinmetis',
             'lapack','dl','m',
             ],
         include_dirs=[numpy_include, IPOPT_INC],
