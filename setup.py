@@ -5,16 +5,13 @@
 # You will probably have to edit this file in unpredictable ways
 # if you want pyipopt to work for you, sorry.
 
-# When I installed Ipopt from source, I used the
-# --prefix=/usr/local
-# option, so this is where I want pyipopt to look for my ipopt installation.
-# I only installed from source because the ipopt packaging
-# for my linux distribution was buggy,
-# so by the time you read this the bugs have probably been fixed
-# and you will want to specify a different directory here.
-IPOPT_DIR = '/usr/local/'
-
 import os
+
+try:
+  IPOPT_DIR = os.environ['IPOPT_DIR']
+catch:
+  IPOPT_DIR = '/usr/local'
+
 from distutils.core import setup
 from distutils.extension import Extension
 
