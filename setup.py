@@ -9,7 +9,7 @@ import os
 
 try:
   IPOPT_DIR = os.environ['IPOPT_DIR']
-catch:
+except KeyError:
   IPOPT_DIR = '/usr/local'
 
 from distutils.core import setup
