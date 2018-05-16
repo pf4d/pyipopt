@@ -45,11 +45,13 @@ pyipopt_extension = Extension(
         #extra_link_args=['-Wl,--rpath','-Wl,'+ IPOPT_LIB],
         library_dirs=[IPOPT_LIB],
         libraries=[
-            'ipopt', 'blas',
-            #'coinhsl',
-            'coinmumps',
-            'coinmetis',
-            'lapack','dl','m',
+            'ipopt',
+            'coinhsl',
+            'dmumps',
+            'metis',
+            'openblas',
+            'dl',
+            'm',
             ],
         include_dirs=[numpy_include, IPOPT_INC],
         )
